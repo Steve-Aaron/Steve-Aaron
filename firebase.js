@@ -27,10 +27,18 @@ function submitForm(e) {
     let question_three_answer = getElementVal("question-three-answer");
     let question_four_answer = getElementVal("question-four-answer");
     let question_five_answer = getElementVal("question-five-answer");
-    console.log('Submitted at: ' + Date.now().toString());
 
-    saveMessage(firstname, lastname, email, question_one_answer, question_two_answer, question_three_answer, question_four_answer, question_five_answer);
-};
+    saveMessage(firstname, lastname, email, question_one_answer, question_two_answer, question_three_answer, question_four_answer, question_five_answer); // save message to firebase
+
+    const successPage = () => {
+        console.log("success_page");
+        $("#page3").show(500);
+        $("#page1").hide(0);
+        $("#page2").hide(0);
+        };
+
+successPage();
+    };
 
 const getElementVal = (id) => document.getElementById(id).value; // get value of input field
 
@@ -47,4 +55,4 @@ const saveMessage = (firstname, lastname, email, question_one_answer, question_t
         question_five_answer: question_five_answer,
         date_submitted: Date.now().toString()
     });
-}
+};

@@ -27,12 +27,4 @@ $(document).ready(function () {
       $("#page2").hide(0);
       $("#page3").hide(0);  
     });
-
-    $("#btnPage3").click(function () {
-      console.log('hw')
-      $("#page3").show(500);
-      $("#page1").hide(0);
-      $("#page2").hide(0);
-      });
-
   });
