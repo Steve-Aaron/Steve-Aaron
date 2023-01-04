@@ -63,13 +63,14 @@
           <form
             action="https://formspree.io/f/xdovognv"
             enctype="multipart/form-data"
+            id="fm-assessment-submission-form"
           >
           <fieldset>
             <h4>Your details</h4>
               <label for id="email">Your email:</label>
-              <input type="email" name="email" placeholder="Email Address">
-              <label>First name:</label><input type="text" name="firstname" class="name-insert" aria-label="First Name" placeholder="First Name">
-              <label>Last name:</label><input type="text" name="lastname" aria-label="Last Name" placeholder="Last Name"></label>
+              <input id="email_this" type="email" name="email"  placeholder="Email Address">
+              <label>First name:</label><input type="text" id="firstname" name="firstname" class="name-insert" aria-label="First Name" placeholder="First Name">
+              <label>Last name:</label><input type="text" id="lastname" name="lastname" aria-label="Last Name" placeholder="Last Name"></label>
             </fieldset>
             <p>Next, we'll ask you five relatively simple, but technical, questions about digital marketing that are relevant to this job role. Please note – once you click 'submit', your answer is final, and we'll only look at the most recent submission per person.</p>
             <h4>Skills Assessment</h4>
@@ -93,13 +94,26 @@
             <textarea required name="question-five-answer" id="question-five-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
             <div class="row">
               <div class="col-lg-3 pb-2">
-                <button type="submit" class="btn btn-primary w-100">Submit</button>
+                <button type="submit" id="submit-form" class="btn btn-primary w-100">Submit</button>
               </div>
               <div class="col-lg-3 pb-2">
                 <div id="btnPage1" class="btn btn-secondary w-100">Go back</div>
+                <div class="col-lg-3 pb-2">
+                <div id="btnPage3" class="btn btn-success w-100">Cheat</div>
               </div>
             </div>
         </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="flexpage" id="page3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>You did it, <span class="name-insert"></span>!</h2><br>
+          <p>Your answers have been submitted. We'll be in touch shortly after reviewing your answers and your CV and let you know if you are invited to the next stage of the process.</p>
         </div>
       </div>
     </div>
@@ -117,6 +131,9 @@
       </div>
     </div>
   </footer>
+  <!-- Firebase -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+  <script src="firebase.js"></script>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">

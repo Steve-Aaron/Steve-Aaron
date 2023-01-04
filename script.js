@@ -1,11 +1,12 @@
 var fname;
 
 $(document).ready(function () {
-  $("#page2").hide(0);  
+  $("#page2").hide(0); $("#page3").hide(0);  
   $("#page1").show(500);
     $("#main").addClass("bg-secondary");
     $("#main").removeClass("bg-primary");
     $("#btnPage2").click(function () {
+      $("#page3").hide(0);  
       fname = document.getElementById('firstname').value;
       if (fname) {
         $("#page1").hide(500);
@@ -20,8 +21,18 @@ $(document).ready(function () {
       alert("Please enter your name"); 
     }
     });
+
     $("#btnPage1").click(function () {
       $("#page1").show(500);
       $("#page2").hide(0);
+      $("#page3").hide(0);  
     });
+
+    $("#btnPage3").click(function () {
+      console.log('hw')
+      $("#page3").show(500);
+      $("#page1").hide(0);
+      $("#page2").hide(0);
+      });
+
   });

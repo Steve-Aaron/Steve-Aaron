@@ -1,0 +1,23 @@
+{
+  "name": "fm-assessment-quiz",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Steve-Aaron/Steve-Aaron.git"
+  },
+  "keywords": [],
+  "author": "Steve-Aaron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Steve-Aaron/Steve-Aaron/issues"
+  },
+  "homepage": "https://github.com/Steve-Aaron/Steve-Aaron#readme",
+  "description": "",
+  "dependencies": {
+    "firebase": "^9.15.0"
+  }
+}
