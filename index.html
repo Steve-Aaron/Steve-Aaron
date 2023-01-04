@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- custom css-->
+    <link href="/style.css" rel="stylesheet">
+          <!-- particles
+          <script type="text/javascript" src="particles.js"></script>
+          <script type="text/javascript" src="app.js"></script>-->
+
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <img class="logo-wrap" src="https://founders-makers.com/wp-content/uploads/2022/11/logo.svg">
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="">
+<div class="flexpage" id="page1" class="page1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div>
+            <h1>Congratulations!</h1>
+            <p>Congratulations on getting to the assessment section of the application for this role.</p>
+            <p>To ensure you are suitable for this role, we'd like you to answer a few digital marketing questions to ensure your suitability for this role.</p>
+            <p>Firstly, so we know this is you, can you tell me your name?</p>
+            <label for="firstname" id="label-firstname"><input type="text" id="firstname" name="firstname">
+            <button id="btnPage2" class="btn btn-secondary">Submit
+              <svg class="arrow">
+                <defs><marker id="m" markerWidth="4" markerHeight="8" refX="0" refY="1" viewBox="0 0 1 2"> <polygon points="0,0 1,1 0,2" fill="currentColor"/></marker></defs>
+                <line x1="0" y1="50%" x2="50%" y2="50%" stroke-width="2" marker-end="url(#m)" stroke="currentColor"/>
+              </svg>
+            </button>
+          </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flexpage" id="page2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>Thanks <span class="name-insert"></span>!</h2> 
+          <p>Now, can you add in your surname and email address, so we can link the application back specifically to you. Please ensure this is the same email address you used to apply for the job role on your CV or cover letter.</p>
+          <!-- modify this form HTML and place wherever you want your form -->
+          <form
+            action="https://formspree.io/f/xdovognv"
+            enctype="multipart/form-data"
+          >
+          <fieldset>
+            <h4>Your details</h4>
+              <label for id="email">Your email:</label>
+              <input type="email" name="email" placeholder="Email Address">
+              <label>First name:</label><input type="text" name="firstname" class="name-insert" aria-label="First Name" placeholder="First Name">
+              <label>Last name:</label><input type="text" name="lastname" aria-label="Last Name" placeholder="Last Name"></label>
+            </fieldset>
+            <p>Next, we'll ask you five relatively simple, but technical, questions about digital marketing that are relevant to this job role. Please note – once you click 'submit', your answer is final, and we'll only look at the most recent submission per person.</p>
+            <h4>Skills Assessment</h4>
+            <label for="question-one-answer">Question one: Suppose you are looking after a new eCommerce direct-to-consumer website, and you want to track its performance. They acquire customers primarily using Google Ads and Facebook. What three trackers would you recommend installing on that website to evaluate its performance?</label>
+            <textarea required name="question-one-answer" id="question-one-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
+            <label for="question-two-answer">Question two: Suppose a client has recently launched a newsletter for their B2B brand and wants to know how what percent of people who visit their website, sign up to that newsletter. They also want to know whether signups are coming more from Twitter, or LinkedIn. How can you track this using Google Analytics 4?</label>
+            <textarea required name="question-two-answer" id="question-two-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
+            <label for="question-three-answer">Question three: Who of the following can you <b>not</b> target using Facebook Ads?</label>
+            <select style="margin-bottom:2rem;" required name="question-three-answer" id="question-three-answer">
+              <option disabled selected>Select from the options below.</option>
+              <option value="follow-page">People who follow your Facebook Page</option>
+              <option value="engaged-shoppers">People who have clicked 'Shop Now' on another person's ad</option>
+              <option value="email-list">People on your email marketing list</option>
+              <option value="ig-admins">People who are administrators of an Instagram Business Profile</option>
+              <option value="divorced-parents">Parents who are recently divorced</option>
+              <option value="income">People who have below-average income in the United Kingdom</option>
+            </select>
+            <label for="question-four-answer">Question four: When creating a Facebook ad set, how can you make sure you are targeting only prospective customers, and not people who bought from you recently?</label>
+            <textarea required name="question-four-answer" id="question-four-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
+            <label for="question-five-answer">Question five: what law, among other things, governs data protection and privacy in the UK and the EU?</label>
+            <textarea required name="question-five-answer" id="question-five-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
+            <div class="row">
+              <div class="col-lg-3 pb-2">
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+              </div>
+              <div class="col-lg-3 pb-2">
+                <div id="btnPage1" class="btn btn-secondary w-100">Go back</div>
+              </div>
+            </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/script.js">
+  </script>
+</div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm text-center"><p class="small float-md-left"><a href="https://founders-makers.com/">Our website</a></p></div>
+        <div class="col-sm text-center"><p class="small">© Founders Makers 2023</p></div>
+        <div class="col-sm text-center"><p class="small float-md-right"><a href="/terms.html">Terms & Conditions</a></p></div>
+      </div>
+    </div>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
