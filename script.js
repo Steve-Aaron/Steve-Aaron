@@ -1,4 +1,5 @@
 let fname;
+console.log('Please do not look at the source code for cheats and hints... you have the internet for that!');
 
 $(document).ready(function () {
   $("#page2").hide(0); $("#page3").hide(0);  
