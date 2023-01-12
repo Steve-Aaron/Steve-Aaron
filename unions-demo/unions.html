@@ -113,8 +113,7 @@
         let selected = $(this).children("option:selected").val();
         let linktext = `<br><small>Click here to <a class="link-info" href="${mp_list[selected].link}">find out more</a>.</small>`;
         console.log(`Load ${mp_list[selected].name}`);
-        // Now show the element with the ID demo, if an option is selected.
-        if (selected != "0") {
+                if (selected != "0") {
           $("#demo").show();
           document.getElementById("demo").innerHTML = `${mp_list[selected].name} received ${mp_list[selected].amount} ${mp_list[selected].year}` +
             linktext;
