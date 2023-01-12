@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>Founders Makers Assessment Test</title>
   <!-- Required jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <!-- Required meta tags -->
@@ -57,25 +57,24 @@
           <p>Now, can you add in your surname and email address, so we can link the application back specifically to you. Please ensure this is the same email address you used to apply for the job role on your CV or cover letter.</p>
           <!-- modify this form HTML and place wherever you want your form -->
           <form
-            action="https://formspree.io/f/xdovognv"
             method="POST"
-            enctype="multipart/form-data"
+            enctype="application/x-www-form-urlencoded"
             id="fm-assessment-submission-form"
           >
           <fieldset>
             <h4>Your details</h4>
-              <label for id="email">Your email:</label>
-              <input id="email_this" type="email" name="email"  placeholder="Email Address">
               <label>First name:</label><input type="text" id="firstname" name="firstname" class="name-insert" aria-label="First Name" placeholder="First Name">
               <label>Last name:</label><input type="text" id="lastname" name="lastname" aria-label="Last Name" placeholder="Last Name"></label>
+              <label for id="email">Your email:</label>
+              <input id="email_this" type="email" name="email"  placeholder="Email Address">
             </fieldset>
-            <p>Next, we'll ask you five relatively simple, but technical, questions about digital marketing that are relevant to this job role. Please note – once you click 'submit', your answer is final, and we'll only look at the most recent submission per person.</p>
+            <p>Next, we'll present you with five questions about digital marketing that are pertinent to this job role. These questions may be straightforward, but they are technical in nature. You can submit as many times as you like, but we will only read the most recent submissions from each person.</p>
             <h4>Skills Assessment</h4>
-            <label for="question-one-answer">Question one: Suppose you are looking after a new eCommerce direct-to-consumer website, and you want to track its performance. They acquire customers primarily using Google Ads and Facebook. What three trackers would you recommend installing on that website to evaluate its performance?</label>
+            <label for="question-one-answer" id="question-one-label">Question one: Suppose you are looking after a new eCommerce direct-to-consumer website, and you want to track its performance. What three trackers would you recommend installing on that website to evaluate its performance?</label>
             <textarea required name="question-one-answer" id="question-one-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
-            <label for="question-two-answer">Question two: Suppose a client has recently launched a newsletter for their B2B brand and wants to know how what percent of people who visit their website, sign up to that newsletter. They also want to know whether signups are coming more from Twitter, or LinkedIn. How can you track this using Google Analytics 4?</label>
+            <label for="question-two-answer" id="question-two-label">Question two: Suppose a client has recently launched a newsletter for their B2B brand, and wants to track its performance. It loads on every page as a part of the webpage, but not as a separate page. When someone signs up, they go to a webpage '/signup'. How can you track this?</label>
             <textarea required name="question-two-answer" id="question-two-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
-            <label for="question-three-answer">Question three: Who of the following can you <b>not</b> target using Facebook Ads?</label>
+            <label for="question-three-answer" id="question-three-label">Question three: Who of the following can you <b>not</b> target using Facebook Ads?</label>
             <select style="margin-bottom:2rem;" required name="question-three-answer" id="question-three-answer">
               <option disabled selected>Select from the options below.</option>
               <option value="follow-page">People who follow your Facebook Page</option>
@@ -85,9 +84,9 @@
               <option value="divorced-parents">Parents who are recently divorced</option>
               <option value="income">People who have below-average income in the United Kingdom</option>
             </select>
-            <label for="question-four-answer">Question four: When creating a Facebook ad set, how can you make sure you are targeting only prospective customers, and not people who bought from you recently?</label>
+            <label id="question-four-label" for="question-four-answer">Question four: When creating a Facebook ad set, how can you make sure you are targeting only prospective customers, and not people who bought from you recently?</label>
             <textarea required name="question-four-answer" id="question-four-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
-            <label for="question-five-answer">Question five: what law, among other things, governs data protection and privacy in the UK and the EU?</label>
+            <label id="question-five-label" for="question-five-answer">Question five: Suppose a brand wants to create a new Facebook ad to help promote and sell its new product through its online store. When they create an ad on Meta Ads Manager, what is the first thing they select?</label>
             <textarea required name="question-five-answer" id="question-five-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
             <div class="row">
               <div class="col-lg-3 pb-2">
@@ -112,7 +111,7 @@
       </div>
     </div>
   </div>
-  <script src="https://steve-aaron.github.io/Steve-Aaron/script.js">
+  <script src="https://steve-aaron.github.io/Steve-Aaron/script.js"> 
   </script>
 </div>
   </main>

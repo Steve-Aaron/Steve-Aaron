@@ -58,13 +58,9 @@ select {
     width:50%;
 }
 
-#label-firstname {
+label:not(#question-three-label) {
     display:flex;
     gap:.5rem;
-}
-
-#firstname {
-    height:50px;
 }
 
 .btn {
