@@ -47,8 +47,7 @@ function submitForm(e) {
     let question_five_question = document.getElementById("question-five-label").innerHTML;
     let question_five_answer = getElementVal("question-five-answer");
 
-    saveMessage(firstname, lastname, email, question_one_answer, question_two_answer, question_three_answer, question_four_answer, question_five_answer); // save message to firebase
-
+    saveMessage(firstname, lastname, email, question_one_question, question_one_answer, question_two_question, question_two_answer, question_three_question, question_three_answer, question_four_question, question_four_answer, question_five_question, question_five_answer); // save message to firebase
     const successPage = () => {
         console.log("success_page");
         $("#page3").show(500);
@@ -61,7 +60,7 @@ successPage();
 
 const getElementVal = (id) => document.getElementById(id).value; // get value of input field
 
-const saveMessage = (firstname, lastname, email, question_one_answer, question_two_answer, question_three_answer, question_four_answer, question_five_answer) => {
+const saveMessage = (firstname, lastname, email, question_one_question, question_one_answer, question_two_question, question_two_answer, question_three_question, question_three_answer, question_four_question, question_four_answer, question_five_question, question_five_answer) => {
     let newContactFormDB = contactFormDB.push();
     newContactFormDB.set({
         firstname: firstname,
