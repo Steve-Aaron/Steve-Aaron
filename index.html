@@ -40,7 +40,7 @@
                 <input class="first-name-input w-100" type="text" id="firstname" name="firstname">
               </div>
               <div class="col-lg-3 pb-2">
-                <button id="btnPage2" class="btn btn-primary w-100">Submit
+                <button id="btnPage2" class="btn btn-primary w-100">Start
                   <svg class="arrow">
                     <defs><marker id="m" markerWidth="4" markerHeight="8" refX="0" refY="1" viewBox="0 0 1 2"> <polygon points="0,0 1,1 0,2" fill="currentColor"/></marker></defs>
                     <line x1="0" y1="50%" x2="50%" y2="50%" stroke-width="2" marker-end="url(#m)" stroke="currentColor"/>
@@ -79,9 +79,9 @@
             </fieldset>
             <p>Next, we'll present you with five questions about digital marketing that are pertinent to this job role. These questions may be straightforward, but they are technical in nature. You can submit as many times as you like, but we will only read the most recent submissions from each person.</p>
             <h4>Skills Assessment</h4>
-            <label for="question-one-answer" id="question-one-label">Question one: Suppose you are looking after a new eCommerce direct-to-consumer website, and you want to track its performance. What three trackers would you recommend installing on that website to evaluate its performance?</label>
+            <label for="question-one-answer" id="question-one-label">Question one: Suppose you are looking after a new eCommerce direct-to-consumer website, and you want to track the website's sales. What three trackers would you recommend installing on the website to evaluate its performance?</label>
             <textarea required name="question-one-answer" id="question-one-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
-            <label for="question-two-answer" id="question-two-label">Question two: Suppose a client has recently launched a newsletter for their B2B brand, and wants to track its performance. It loads on every page as a part of the webpage, but not as a separate page. When someone signs up, they go to a webpage '/signup'. How can you track this?</label>
+            <label for="question-two-answer" id="question-two-label">Question two: Suppose a client has recently launched a newsletter signup widget for their business-to-business brand. How would you track the number of signups to the newsletter, and where those signups came from?</label>
             <textarea required name="question-two-answer" id="question-two-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
             <label for="question-three-answer" id="question-three-label">Question three: Who of the following can you <b>not</b> target using Facebook Ads?</label>
             <select style="margin-bottom:2rem;" required name="question-three-answer" id="question-three-answer">
@@ -93,10 +93,17 @@
               <option value="divorced-parents">Parents who are recently divorced</option>
               <option value="income">People who have below-average income in the United Kingdom</option>
             </select>
-            <label id="question-four-label" for="question-four-answer">Question four: When creating a Facebook ad set, how can you make sure you are targeting only prospective customers, and not people who bought from you recently?</label>
+            <label id="question-four-label" for="question-four-answer">Question four: When creating a Facebook ad set, how can you make sure you are targeting only new customers, and not people who bought from you recently?</label>
             <textarea required name="question-four-answer" id="question-four-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
-            <label id="question-five-label" for="question-five-answer">Question five: Suppose a brand wants to create a new Facebook ad to help promote and sell its new product through its online store. When they create an ad on Meta Ads Manager, what is the first thing they select?</label>
-            <textarea required name="question-five-answer" id="question-five-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
+            <label id="question-five-label" for="question-five-answer">Question five: Suppose a brand wants to create a new Facebook ad to help promote and sell their products online. When they create an ad on Meta Ads Manager, what is the first thing they select?</label>
+            
+            <select style="margin-bottom:2rem;" required name="question-five-answer" id="question-five-answer">
+              <option disabled selected>Select from the options below.</option>
+              <option value="ad-set">Choose a Campaign Objective</option>
+              <option value="ad-account">Create an Ad Account</option>
+              <option value="ad-campaign">Choose your Audience</option>
+              <option value="ad-creative">Select the Ad Type</option>
+            </select>
             <div class="row">
               <div class="col-lg-3 pb-2">
                 <button type="submit" id="submit-form" class="btn btn-primary w-100">Submit</button>
