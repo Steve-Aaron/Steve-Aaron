@@ -67,10 +67,15 @@ const saveMessage = (firstname, lastname, email, question_one_answer, question_t
         firstname: firstname,
         lastname: lastname,
         email: email,
+        question_one_question: question_one_question,
         question_one_answer: question_one_answer,
+        question_two_question: question_two_question,
         question_two_answer: question_two_answer,
+        question_three_question: question_three_question,
         question_three_answer: question_three_answer,
+        question_four_question: question_four_question,
         question_four_answer: question_four_answer,
+        question_five_question: question_five_question,
         question_five_answer: question_five_answer,
         date_submitted: Date.now().toString()
     });
