@@ -35,14 +35,23 @@
             <p>Congratulations on getting to the assessment section of the application for this role.</p>
             <p>To ensure you are suitable for this role, we'd like you to answer a few digital marketing questions to ensure your suitability for this role.</p>
             <p>Firstly, so we know this is you, can you tell me your name?</p>
-            <label for="firstname" id="label-firstname"><input type="text" id="firstname" name="firstname">
-            <button id="btnPage2" class="btn btn-secondary">Submit
-              <svg class="arrow">
-                <defs><marker id="m" markerWidth="4" markerHeight="8" refX="0" refY="1" viewBox="0 0 1 2"> <polygon points="0,0 1,1 0,2" fill="currentColor"/></marker></defs>
-                <line x1="0" y1="50%" x2="50%" y2="50%" stroke-width="2" marker-end="url(#m)" stroke="currentColor"/>
-              </svg>
-            </button>
-          </label>
+            <div class="row">
+              <div class="col-lg-3 pb-2">
+                <input class="first-name-input w-100" type="text" id="firstname" name="firstname">
+              </div>
+              <div class="col-lg-3 pb-2">
+                <button id="btnPage2" class="btn btn-primary w-100">Submit
+                  <svg class="arrow">
+                    <defs><marker id="m" markerWidth="4" markerHeight="8" refX="0" refY="1" viewBox="0 0 1 2"> <polygon points="0,0 1,1 0,2" fill="currentColor"/></marker></defs>
+                    <line x1="0" y1="50%" x2="50%" y2="50%" stroke-width="2" marker-end="url(#m)" stroke="currentColor"/>
+                  </svg>
+                </button>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
           </div>
         </div>
       </div>
@@ -93,7 +102,9 @@
                 <button type="submit" id="submit-form" class="btn btn-primary w-100">Submit</button>
               </div>
               <div class="col-lg-3 pb-2">
-                <div id="btnPage1" class="btn btn-secondary w-100">Go back</div>
+                <div id="btnPage1" class="btn btn-secondary w-100">Go back
+                </div>
+              </div>
             </div>
         </form>
         </div>
@@ -126,7 +137,7 @@
   </script>
   <!-- Firebase -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-  <script src="https://steve-aaron.github.io/Steve-Aaron/firebase.js"></script>
+  <script src="https://steve-aaron.github.io/Steve-Aaron/firebase.js"></script> 
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">

@@ -9,8 +9,6 @@ body {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 1rem;
@@ -56,6 +54,10 @@ textarea {
 
 select {
     width:50%;
+}
+
+.first-name-input {
+height:2rem;
 }
 
 label:not(#question-three-label) {
