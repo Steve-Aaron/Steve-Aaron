@@ -8,12 +8,6 @@ body {
     position: relative;
 }
 
-main {
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-}
-
 a {
     color:black;
     text-decoration:none;
