@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>How much does your Labour MP get from trade unions?</title>
   <!-- Required jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
@@ -111,7 +111,7 @@
       ];
       $("#inputGroupSelect02").change(function () {
         let selected = $(this).children("option:selected").val();
-        let linktext = `<small>Click here to <a class="link-info" href="${mp_list[selected].link}">find out more</a>.</small>`;
+        let linktext = `<br><small>Click here to <a class="link-info" href="${mp_list[selected].link}">find out more</a>.</small>`;
         console.log(`Load ${mp_list[selected].name}`);
         // Now show the element with the ID demo, if an option is selected.
         if (selected != "0") {
