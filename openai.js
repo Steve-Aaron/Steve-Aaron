@@ -1,3 +1,16 @@
+/* Webflow connection information */
+
+let url, options;
+const { json } = require('express/lib/response');
+const fetch = require('node-fetch'); // node-fetch is a library that allows you to make HTTP requests in Node.js.
+
+const wf_type = 'sites'; // the type of Webflow object you want to use.
+const wf_token = '8e89cd9439c611329b74da9593e01031e456fc02e8b4e726adb267c3df174699'; // The API token for your Webflow account.
+const site_id = '6074b7cf4935e8f1e3b0ce56'; // The ID of the site you want to use.
+let bp_col_id = '6074b7cf4935e85342b0ce6a' // The ID of the collection you want to use.
+let limit = 10; // max limit: 100.
+let offset = 0; // offset is the number of pages to skip, the number of pages set to the limit. So if you want to skip 10 pages, set offset to 1 and limit to 10, or offset to 2 and limit to 5.
+
 /* FUNCTIONING OPENAI CALL
  RETURNS PROMPT BASED ON TOPIC */
 
@@ -22,8 +35,14 @@ let default_topics = [
   "Data Analysis",
 ]
 
-let topic = 'trophy hunting' // default_topics[Math.floor(Math.random() * default_topics.length)]
-let prompt_type = "history" // select one of: 'guide', 'introduction', 'history'.
+let default_prompt_types = [
+  "guide",
+  "introduction",
+  "history",
+]
+
+let topic = default_topics[Math.floor(Math.random() * default_topics.length)];
+let prompt_type = default_prompt_types[Math.floor(Math.random() * default_prompt_types.length)];
 
 let prompt, prompt_headline, prompt_intro, prompt_history, prompt_why_use;
 const prompt_topic = topic.toLowerCase().replace(' ', '-');
@@ -83,7 +102,7 @@ let presence_penalty = 0.4
 let stop = "A:"
 
 // Write the blog headline:
-;(async ()=>{
+;(async () => {
 let prompt = "Write the headline to a blog article about: " + prompt_topic + "A:" // writes the blog introduction
  response = await openai.createCompletion({
 prompt: prompt,
@@ -99,8 +118,8 @@ prompt_headline = response.data.choices[0].text;
 console.log('headline: ' + prompt_headline)
 
 // Write the blog introduction:
-    prompt = "Write a three paragraph introduction to a blog article with the headline: " + prompt_headline + ". Use `\n` to create a new paragraph. A:" // writes the blog introduction
-   response = await openai.createCompletion({
+  prompt = "Write a three paragraph introduction to a blog article with the headline: " + prompt_headline + ". Use `\n` to create a new paragraph. A:" // writes the blog introduction
+  response = await openai.createCompletion({
   prompt: prompt,
   max_tokens: 250,
   model: model,
@@ -112,7 +131,7 @@ console.log('headline: ' + prompt_headline)
   });
 
 prompt_intro = response.data.choices[0].text;
-console.log('intro: ' + prompt_intro.length + ' words')
+console.log('intro: roughly ' + prompt_intro.split(" ").length + ' words written. Begins: ' + prompt_intro.split(" ").slice(0, 10).join(" ") + '...');
 
 // Write the blog history:
 
@@ -129,7 +148,7 @@ prompt = "Write a three paragraph summary of the history of " + prompt_topic + "
   });
 
   prompt_history = response.data.choices[0].text;
-  console.log('history: ' + prompt_history.length + ' words')
+  console.log('history: roughly ' + prompt_history.split(" ").length + ' words written. Begins: ' + prompt_history.split(" ").slice(0, 10).join(" ") + '...');
 
 
 
@@ -148,29 +167,18 @@ prompt = "Write about some of the most important individuals or companies who ha
   });
 
   prompt_experts = response.data.choices[0].text;
-  console.log('experts: ' + prompt_experts.length + ' words'))
+  console.log('experts: roughly ' + prompt_intro.split(" ").length + ' words. Begins: ' + prompt_experts.split(" ").slice(0, 10).join(" ") + '...');
 
 })();
 
-let url, options;
-const { json } = require('express/lib/response');
-const fetch = require('node-fetch'); // node-fetch is a library that allows you to make HTTP requests in Node.js.
-
-const wf_type = 'sites'; // the type of Webflow object you want to use.
-const wf_token = '8e89cd9439c611329b74da9593e01031e456fc02e8b4e726adb267c3df174699'; // The API token for your Webflow account.
-const site_id = '6074b7cf4935e8f1e3b0ce56'; // The ID of the site you want to use.
-let bp_col_id = '6074b7cf4935e85342b0ce6a' // The ID of the collection you want to use.
-let limit = 10; // max limit: 100.
-let offset = 0; // offset is the number of pages to skip, the number of pages set to the limit. So if you want to skip 10 pages, set offset to 1 and limit to 10, or offset to 2 and limit to 5.
-let publish_slug, publish_title, publish_body, publish_name;
-let publish_status = 'false';
-
 //CREATE A WEBFLOW ITEM WITH SLUG, TITLE AND BODY FROM VARIABLES. 
+let publish_status = 'false';
+let publish_slug = prompt_slug;
+let publish_title = prompt_headline;
+let publish_body =  prompt_intro.replace(/\n/g, '</p><p>') + '</p><p>' + prompt_history.replace(/\n/g, '</p><p>') + '</p><p>' + prompt_experts.replace(/\n/g, '</p><p>') + '</p>'
+; // prompt_intro + prompt_history + prompt_experts;
+let publish_name = 'Test Name';
 
-publish_slug = prompt_slug
-publish_title = 'Test Title';
-publish_body = 'Test Body';
-publish_name = 'Test Name';
 archived = 'false';
 draft = 'false';
 featured = 'false';
@@ -195,7 +203,7 @@ options = {
 
 fetch(url, options)
   .then(res => res.json())
-  .then(json => console.log('published!'))
+  .then(json => console.log('publishing...'))
   .catch(err => console.error('error:' + err));
 
 
