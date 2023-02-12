@@ -98,22 +98,31 @@
             <select style="margin-bottom:2rem;" required name="question-three-answer" id="question-three-answer">
               <option disabled selected>Select from the options below.</option>
               <option value="follow-page">People who follow your Facebook Page</option>
-              <option value="engaged-shoppers">People who have clicked 'Shop Now' on another person's ad</option>
+              <option value="engaged-shoppers">People who have clicked 'Shop Now' in the last seven days on a Facebook ad</option>
               <option value="email-list">People on your email marketing list</option>
               <option value="ig-admins">People who are administrators of an Instagram Business Profile</option>
-              <option value="divorced-parents">Parents who are recently divorced</option>
+              <option value="divorced-parents">Divorced parents</option>
               <option value="income">People who have below-average income in the United Kingdom</option>
             </select>
             <label id="question-four-label" for="question-four-answer">Question four: When creating a Facebook ad set, how can you make sure you are targeting only new customers, and not people who bought from you recently?</label>
             <textarea required name="question-four-answer" id="question-four-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
             <label id="question-five-label" for="question-five-answer">Question five: Suppose a brand wants to create a new Facebook ad to help promote and sell their products online. When they create an ad on Meta Ads Manager, what is the first thing they select?</label>
-            
             <select style="margin-bottom:2rem;" required name="question-five-answer" id="question-five-answer">
               <option disabled selected>Select from the options below.</option>
               <option value="choose-objective">Choose a Campaign Objective</option>
               <option value="choose-ad-account">Create an Ad Account</option>
               <option value="choose-audience">Choose your Audience</option>
               <option value="choose-ad-type">Select the Ad Type</option>
+            </select>
+            <label id="question-six-label" for="question-six-question">Question six: Describe a successful digital marketing campaign you have managed, what your role was in relation to that campaign, and the results you achieved.</label>
+            <textarea required name="question-six-answer" id="question-six-answer" minlength="3" maxlength="512" placeholder="Max 512 characters" rows="3"></textarea>
+            <label id="question-seven-label" for="question-seven-answer">Question seven: in your words, what are the main advantages or disadvantages of online marketing, compared to offline marketing?</label>
+            <textarea required name="question-seven-answer" id="question-seven-answer" minlength="3" maxlength="255" placeholder="Max 255 characters" row="3"></textarea>
+            <label id="question-eight-label" for="question-eight-answer">Question eight: Will you now or in the future require sponsorship for employment visa status?</label>
+            <select style="margin-bottom:2rem;" required name="question-eight-answer" id="question-eight-answer">
+              <option disabled selected>Select from the options below.</option>  
+              <option value="yes-requires-sponsorship">Yes</option>
+              <option value="no-doesnt-require-sponsorship">No</option>
             </select>
             <div class="row">
               <div class="col-lg-3 pb-2">
@@ -151,7 +160,7 @@
       </div>
     </div>
   </footer>
-  <script src="https://steve-aaron.github.io/Steve-Aaron/script.js"> 
+  <script src="/script.js"> 
   </script>
   <!-- Firebase -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>

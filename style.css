@@ -36,18 +36,12 @@ fieldset {
 
 textarea, label, input, option, select {
     font-size: .75rem;
+    padding: .25rem;
 }
 
 textarea, select {
-    margin:1rem 0;
-}
-
-textarea {
     width:100%;
-}
-
-select {
-    width:50%;
+    margin:1rem 0;
 }
 
 .first-name-input {

@@ -47,8 +47,14 @@ function submitForm(e) {
     let question_four_answer = getElementVal("question-four-answer");
     let question_five_question = document.getElementById("question-five-label").innerHTML;
     let question_five_answer = getElementVal("question-five-answer");
+    let question_six_question = document.getElementById("question-six-label").innerHTML;
+    let question_six_answer = getElementVal("question-six-answer");
+    let question_seven_question = document.getElementById("question-seven-label").innerHTML;
+    let question_seven_answer = getElementVal("question-seven-answer");
+    let question_eight_question = document.getElementById("question-eight-label").innerHTML;
+    let question_eight_answer = getElementVal("question-eight-answer");
 
-    saveMessage(firstname, lastname, email, question_one_question, question_one_answer, question_two_question, question_two_answer, question_three_question, question_three_answer, question_four_question, question_four_answer, question_five_question, question_five_answer); // save message to firebase
+    saveMessage(firstname, lastname, email, question_one_question, question_one_answer, question_two_question, question_two_answer, question_three_question, question_three_answer, question_four_question, question_four_answer, question_five_question, question_five_answer, question_six_question, question_six_answer, question_seven_question, question_seven_answer, question_eight_question, question_eight_answer); // save message to firebase
     const successPage = () => {
         console.log("success_page");
         $("#page3").show(500);
@@ -61,7 +67,7 @@ successPage();
 
 const getElementVal = (id) => document.getElementById(id).value; // get value of input field
 
-const saveMessage = (firstname, lastname, email, question_one_question, question_one_answer, question_two_question, question_two_answer, question_three_question, question_three_answer, question_four_question, question_four_answer, question_five_question, question_five_answer) => {
+const saveMessage = (firstname, lastname, email, question_one_question, question_one_answer, question_two_question, question_two_answer, question_three_question, question_three_answer, question_four_question, question_four_answer, question_five_question, question_five_answer, question_six_question, question_six_answer, question_seven_question, question_seven_answer, question_eight_question, question_eight_answer) => {
     let newContactFormDB = contactFormDB.push();
     newContactFormDB.set({
         firstname: firstname,
@@ -77,6 +83,12 @@ const saveMessage = (firstname, lastname, email, question_one_question, question
         question_four_answer: question_four_answer,
         question_five_question: question_five_question,
         question_five_answer: question_five_answer,
+        question_six_question: question_six_question,
+        question_six_answer: question_six_answer,
+        question_seven_question: question_seven_question,
+        question_seven_answer: question_seven_answer,
+        question_eight_question: question_eight_question,
+        question_eight_answer: question_eight_answer,
         date_submitted: Date.now().toString()
     });
 };
