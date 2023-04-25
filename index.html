@@ -75,7 +75,6 @@
         <div class="col-md-8">
           <h2>Thanks <span class="name-insert"></span>!</h2> 
           <p>Now, can you add in your surname and email address, so we can link the application back specifically to you. Please ensure this is the same email address you used to apply for the job role on your CV or cover letter.</p>
-          <!-- modify this form HTML and place wherever you want your form -->
           <form
             method="POST"
             enctype="application/x-www-form-urlencoded"
@@ -87,43 +86,41 @@
               <label>Last name:</label><input type="text" id="lastname" name="lastname" aria-label="Last Name" placeholder="Last Name"></label>
               <label for id="email">Your email:</label>
               <input id="email_this" type="email" name="email"  placeholder="Email Address">
-            </fieldset>
-            <p>Next, we'll present you with five questions about digital marketing that are pertinent to this job role. These questions may be straightforward, but they are technical in nature. You can submit as many times as you like, but we will only read the most recent submissions from each person.</p>
-            <h4>Skills Assessment</h4>
-            <label for="question-one-answer" id="question-one-label">Question one: Suppose you are looking after a new eCommerce direct-to-consumer website, and you want to track the website's sales. What three trackers would you recommend installing on the website to evaluate its performance, and why?</label>
-            <textarea required name="question-one-answer" id="question-one-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
-            <label for="question-two-answer" id="question-two-label">Question two: Suppose a client has recently launched a newsletter signup widget for their business-to-business brand. How would you track the number of signups to the newsletter, and where those signups came from?</label>
-            <textarea required name="question-two-answer" id="question-two-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
-            <label for="question-three-answer" id="question-three-label">Question three: Who of the following can you <b>not</b> target using Facebook Ads?</label>
-            <select style="margin-bottom:2rem;" required name="question-three-answer" id="question-three-answer">
-              <option disabled selected>Select from the options below.</option>
-              <option value="follow-page">People who follow your Facebook Page</option>
-              <option value="engaged-shoppers">People who have clicked 'Shop Now' in the last seven days on a Facebook ad</option>
-              <option value="email-list">People on your email marketing list</option>
-              <option value="ig-admins">People who are administrators of an Instagram Business Profile</option>
-              <option value="divorced-parents">Divorced parents</option>
-              <option value="income">People who have below-average income in the United Kingdom</option>
-            </select>
-            <label id="question-four-label" for="question-four-answer">Question four: When creating a Facebook ad set, how can you make sure you are targeting only new customers, and not people who bought from you recently?</label>
-            <textarea required name="question-four-answer" id="question-four-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
-            <label id="question-five-label" for="question-five-answer">Question five: Suppose a brand wants to create a new Facebook ad to help promote and sell their products online. When they create an ad on Meta Ads Manager, what is the first thing they select?</label>
-            <select style="margin-bottom:2rem;" required name="question-five-answer" id="question-five-answer">
-              <option disabled selected>Select from the options below.</option>
-              <option value="choose-objective">Choose a Campaign Objective</option>
-              <option value="choose-ad-account">Create an Ad Account</option>
-              <option value="choose-audience">Choose your Audience</option>
-              <option value="choose-ad-type">Select the Ad Type</option>
-            </select>
-            <label id="question-six-label" for="question-six-question">Question six: Describe a successful digital marketing campaign you have managed, what your role was in relation to that campaign, and the results you achieved.</label>
-            <textarea required name="question-six-answer" id="question-six-answer" minlength="3" maxlength="512" placeholder="Max 512 characters" rows="3"></textarea>
-            <label id="question-seven-label" for="question-seven-answer">Question seven: in your words, what are the main advantages or disadvantages of online marketing, compared to offline marketing?</label>
-            <textarea required name="question-seven-answer" id="question-seven-answer" minlength="3" maxlength="255" placeholder="Max 255 characters" row="3"></textarea>
-            <label id="question-eight-label" for="question-eight-answer">Question eight: Will you now or in the future require sponsorship for employment visa status?</label>
-            <select style="margin-bottom:2rem;" required name="question-eight-answer" id="question-eight-answer">
+              <label id="sponsorship-label" for="sponsorship-answer">And will you now or in the future require sponsorship for employment visa status?</label>
+            <select style="margin:0;" required name="sponsorship-answer" id="sponsorship-answer">
               <option disabled selected>Select from the options below.</option>  
               <option value="yes-requires-sponsorship">Yes</option>
               <option value="no-doesnt-require-sponsorship">No</option>
             </select>
+            </fieldset>
+            <p>Next, we'll present you with a few questions about digital marketing that are pertinent to this job role. These questions may be straightforward, but they are technical in nature. You can submit as many times as you like, but we will only read the most recent submissions from each person.</p>
+            <h4>Skills Assessment</h4>
+            <label for="question-one-answer" id="question-one-label">Question one: Suppose you are looking after a new eCommerce direct-to-consumer website, and you want to track the website's sales. What trackers might you install on the website to evaluate its performance, and why?</label>
+            <textarea required name="question-one-answer" id="question-one-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
+            <label for="question-two-answer" id="question-two-label">Question two: Suppose a client has recently launched a newsletter signup widget for their business-to-business brand. How would you track the number of signups to the newsletter?</label>
+            <textarea required name="question-two-answer" id="question-two-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
+            <label for="question-three-answer" id="question-three-label">Question three: Suppose a client is looking to generate leads for their business through Meta advertising. Which of the following metrics would be the most useful for evaluating the success of their campaign?</label>
+            <select style="margin-bottom:2rem;" required name="question-three-answer" id="question-three-answer">
+              <option disabled selected>Select from the options below.</option>
+              <option value="impressions">Impressions</option>
+              <option value="ctr">Click-through rate</option>
+              <option value="reach">Reach</option>
+              <option value="CPM">Cost per thousand impressions</option>
+            </select>
+            <label id="question-four-label" for="question-four-answer">Question four: What is A/B testing? Give an example of an A/B test you could run on this site.</label>
+            <textarea required name="question-four-answer" id="question-four-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
+            <label id="question-five-label" for="question-five-answer">Question five: A business spends £5,000 on a Facebook ad campaign and reaches 50,000 people. If the cost per click (CPC) is £1.50, what is the click-through rate (CTR) for the campaign?</label>
+            <select style="margin-bottom:2rem;" required name="question-five-answer" id="question-five-answer">
+              <option disabled selected>Select from the options below.</option>
+              <option value="6.66">6.66%</option>
+              <option value="3.33">3.33%</option>
+              <option value="4">4%</option>
+              <option value="5">5%</option>
+              <option value="10">10%</option>
+              <option value="Other">Other</option>
+            </select>
+            <label id="question-six-label" for="question-six-question">Question six: Describe a successful digital marketing campaign you have managed, what your role was in relation to that campaign, and the results you achieved.</label>
+            <textarea required name="question-six-answer" id="question-six-answer" minlength="3" maxlength="512" placeholder="Max 512 characters" rows="3"></textarea>
             <div class="row">
               <div class="col-lg-3 pb-2">
                 <button type="submit" id="submit-form" class="btn btn-primary w-100">Submit</button>
@@ -145,6 +142,8 @@
         <div class="col-md-8">
           <h2>You did it, <span class="name-insert"></span>!</h2><br>
           <p>Your answers have been submitted. We'll be in touch shortly after reviewing your answers and your CV and let you know if you are invited to the next stage of the process.</p>
+          <p>If you've not submitted your CV already, please email it to <a href='mailto:iwannawork@founders-makers.com'>iwannawork@founders-makers.com</a> now with the subject line: 'Graduate Digital Marketing Executive'.</p>
+          <p>Looking forward to reading your application!</p>
         </div>
       </div>
     </div>
@@ -160,7 +159,7 @@
       </div>
     </div>
   </footer>
-  <script src="/script.js"> 
+  <script src="./script.js"> 
   </script>
   <!-- Firebase -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>

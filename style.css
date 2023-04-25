@@ -48,11 +48,6 @@ textarea, select {
 height:2rem;
 }
 
-label:not(#question-three-label) {
-    display:flex;
-    gap:.5rem;
-}
-
 .btn {
     height:52px;
     gap:.5rem;

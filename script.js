@@ -49,12 +49,10 @@ function submitForm(e) {
     let question_five_answer = getElementVal("question-five-answer");
     let question_six_question = document.getElementById("question-six-label").innerHTML;
     let question_six_answer = getElementVal("question-six-answer");
-    let question_seven_question = document.getElementById("question-seven-label").innerHTML;
-    let question_seven_answer = getElementVal("question-seven-answer");
-    let question_eight_question = document.getElementById("question-eight-label").innerHTML;
-    let question_eight_answer = getElementVal("question-eight-answer");
+    let sponsorship_question = document.getElementById("sponsorship-label").innerHTML;
+    let sponsorship_answer = getElementVal("sponsorship-answer");
 
-    saveMessage(firstname, lastname, email, question_one_question, question_one_answer, question_two_question, question_two_answer, question_three_question, question_three_answer, question_four_question, question_four_answer, question_five_question, question_five_answer, question_six_question, question_six_answer, question_seven_question, question_seven_answer, question_eight_question, question_eight_answer); // save message to firebase
+    saveMessage(firstname, lastname, email, question_one_question, question_one_answer, question_two_question, question_two_answer, question_three_question, question_three_answer, question_four_question, question_four_answer, question_five_question, question_five_answer, question_six_question, question_six_answer, sponsorship_question, sponsorship_answer); // save message to firebase
     const successPage = () => {
         console.log("success_page");
         $("#page3").show(500);
@@ -67,28 +65,26 @@ successPage();
 
 const getElementVal = (id) => document.getElementById(id).value; // get value of input field
 
-const saveMessage = (firstname, lastname, email, question_one_question, question_one_answer, question_two_question, question_two_answer, question_three_question, question_three_answer, question_four_question, question_four_answer, question_five_question, question_five_answer, question_six_question, question_six_answer, question_seven_question, question_seven_answer, question_eight_question, question_eight_answer) => {
+const saveMessage = (firstname, lastname, email, question_one_question, question_one_answer, question_two_question, question_two_answer, question_three_question, question_three_answer, question_four_question, question_four_answer, question_five_question, question_five_answer, question_six_question, question_six_answer, sponsorship_question, sponsorship_answer) => {
     let newContactFormDB = contactFormDB.push();
     newContactFormDB.set({
         firstname: firstname,
         lastname: lastname,
         email: email,
-        question_one_question: question_one_question,
-        question_one_answer: question_one_answer,
-        question_two_question: question_two_question,
-        question_two_answer: question_two_answer,
-        question_three_question: question_three_question,
-        question_three_answer: question_three_answer,
-        question_four_question: question_four_question,
-        question_four_answer: question_four_answer,
-        question_five_question: question_five_question,
-        question_five_answer: question_five_answer,
-        question_six_question: question_six_question,
-        question_six_answer: question_six_answer,
-        question_seven_question: question_seven_question,
-        question_seven_answer: question_seven_answer,
-        question_eight_question: question_eight_question,
-        question_eight_answer: question_eight_answer,
+        question_1_question: question_one_question,
+        question_1_answer: question_one_answer,
+        question_2_question: question_two_question,
+        question_2_answer: question_two_answer,
+        question_3_question: question_three_question,
+        question_3_answer: question_three_answer,
+        question_4_question: question_four_question,
+        question_4_answer: question_four_answer,
+        question_5_question: question_five_question,
+        question_5_answer: question_five_answer,
+        question_6_question: question_six_question,
+        question_6_answer: question_six_answer,
+        sponsorship_question: sponsorship_question,
+        sponsorship_answer: sponsorship_answer,
         date_submitted: Date.now().toString()
     });
 };
