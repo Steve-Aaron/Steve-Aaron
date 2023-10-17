@@ -8,6 +8,10 @@ body {
     position: relative;
 }
 
+div.mw-1000 {
+    max-width: 1000px;
+}
+
 a {
     color:black;
     text-decoration:none;

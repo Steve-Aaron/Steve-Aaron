@@ -12,7 +12,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!-- custom CSS-->
-    <link href="https://steve-aaron.github.io/Steve-Aaron/style.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -40,23 +40,18 @@
 <div class="flexpage" id="page1" class="page1">
     <div class="container">
       <div class="row">
-        <div class="col-md-8">
-          <div>
+        <div class="col-md-12">
+          <div class="mw-1000">
             <h1>Congratulations!</h1>
-            <p>Congratulations on getting to the assessment section of the application for this role.</p>
+            <p><span id="tod"></span>congratulations on getting to the assessment section of the application for this role.</p>
             <p>To ensure you are suitable for this role, we'd like you to answer a few digital marketing questions to ensure your suitability for this role.</p>
-            <p>Firstly, so we know this is you, can you tell me your name?</p>
+            <p class="pb-4">Firstly, so we know this is you, can you tell me your name?</p>
             <div class="row">
               <div class="col-lg-3 pb-2">
                 <input class="first-name-input w-100" type="text" id="firstname" name="firstname">
               </div>
               <div class="col-lg-3 pb-2">
-                <button id="btnPage2" class="btn btn-primary w-100">Start
-                  <svg class="arrow">
-                    <defs><marker id="m" markerWidth="4" markerHeight="8" refX="0" refY="1" viewBox="0 0 1 2"> <polygon points="0,0 1,1 0,2" fill="currentColor"/></marker></defs>
-                    <line x1="0" y1="50%" x2="50%" y2="50%" stroke-width="2" marker-end="url(#m)" stroke="currentColor"/>
-                  </svg>
-                </button>
+                <button id="btnPage2" class="btn btn-primary w-100">Start</button>
                 </div>
               </div>
             </div>
@@ -84,8 +79,8 @@
             <h4>Your details</h4>
               <label>First name:</label><input type="text" id="firstname" name="firstname" class="name-insert" aria-label="First Name" placeholder="First Name">
               <label>Last name:</label><input type="text" id="lastname" name="lastname" aria-label="Last Name" placeholder="Last Name"></label>
-              <label for id="email">Your email:</label>
-              <input id="email_this" type="email" name="email"  placeholder="Email Address">
+              <label for="email_this" id="email">Your email:</label>
+              <input required id="email_this" type="email" name="email" placeholder="Email Address">
               <label id="sponsorship-label" for="sponsorship-answer">And will you now or in the future require sponsorship for employment visa status?</label>
             <select style="margin:0;" required name="sponsorship-answer" id="sponsorship-answer">
               <option disabled selected>Select from the options below.</option>  
@@ -95,11 +90,11 @@
             </fieldset>
             <p>Next, we'll present you with a few questions about digital marketing that are pertinent to this job role. These questions may be straightforward, but they are technical in nature. You can submit as many times as you like, but we will only read the most recent submissions from each person.</p>
             <h4>Skills Assessment</h4>
-            <label for="question-one-answer" id="question-one-label">Question one: Suppose you are looking after a new eCommerce direct-to-consumer website, and you want to track the website's sales. What trackers might you install on the website to evaluate its performance, and why?</label>
+            <label for="question-one-answer" id="question-one-label"></label>
             <textarea required name="question-one-answer" id="question-one-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
-            <label for="question-two-answer" id="question-two-label">Question two: Suppose a client has recently launched a newsletter signup widget for their business-to-business brand. How would you track the number of signups to the newsletter?</label>
+            <label for="question-two-answer" id="question-two-label"></label>
             <textarea required name="question-two-answer" id="question-two-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
-            <label for="question-three-answer" id="question-three-label">Question three: Suppose a client is looking to generate leads for their business through Meta advertising. Which of the following metrics would be the most useful for evaluating the success of their campaign?</label>
+            <label for="question-three-answer" id="question-three-label"></label>
             <select style="margin-bottom:2rem;" required name="question-three-answer" id="question-three-answer">
               <option disabled selected>Select from the options below.</option>
               <option value="impressions">Impressions</option>
@@ -107,9 +102,9 @@
               <option value="reach">Reach</option>
               <option value="CPM">Cost per thousand impressions</option>
             </select>
-            <label id="question-four-label" for="question-four-answer">Question four: What is A/B testing? Give an example of an A/B test you could run on this site.</label>
+            <label id="question-four-label" for="question-four-answer"></label>
             <textarea required name="question-four-answer" id="question-four-answer" minlength="3" maxlength="255" placeholder="Max 256 characters." rows="3"></textarea>
-            <label id="question-five-label" for="question-five-answer">Question five: A business spends £5,000 on a Facebook ad campaign and reaches 50,000 people. If the cost per click (CPC) is £1.50, what is the click-through rate (CTR) for the campaign?</label>
+            <label id="question-five-label" for="question-five-answer"></label>
             <select style="margin-bottom:2rem;" required name="question-five-answer" id="question-five-answer">
               <option disabled selected>Select from the options below.</option>
               <option value="6.66">6.66%</option>
@@ -119,8 +114,6 @@
               <option value="10">10%</option>
               <option value="Other">Other</option>
             </select>
-            <label id="question-six-label" for="question-six-question">Question six: Describe a successful digital marketing campaign you have managed, what your role was in relation to that campaign, and the results you achieved.</label>
-            <textarea required name="question-six-answer" id="question-six-answer" minlength="3" maxlength="512" placeholder="Max 512 characters" rows="3"></textarea>
             <div class="row">
               <div class="col-lg-3 pb-2">
                 <button type="submit" id="submit-form" class="btn btn-primary w-100">Submit</button>
@@ -141,7 +134,7 @@
       <div class="row">
         <div class="col-md-8">
           <h2>You did it, <span class="name-insert"></span>!</h2><br>
-          <p>Your answers have been submitted. We'll be in touch shortly after reviewing your answers and your CV and let you know if you are invited to the next stage of the process.</p>
+          <p>Your answers have been submitted. Your submission ID is <span class="fw-bold" id="submissionId">[error]</span>. We'll be in touch shortly after reviewing your answers and your CV and let you know if you are invited to the next stage of the process.</p>
           <p>If you've not submitted your CV already, please email it to <a href='mailto:iwannawork@founders-makers.com'>iwannawork@founders-makers.com</a> now with the subject line: 'Graduate Digital Marketing Executive'.</p>
           <p>Looking forward to reading your application!</p>
         </div>
@@ -163,7 +156,7 @@
   </script>
   <!-- Firebase -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-  <script src="https://steve-aaron.github.io/Steve-Aaron/firebase.js"></script> 
+  <script src="./firebase.js"></script> 
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
