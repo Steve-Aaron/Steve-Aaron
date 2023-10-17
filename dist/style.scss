@@ -1,0 +1,92 @@
+// import bootstrap from node_modules
+@import "~bootstrap/scss/bootstrap";
+
+$soapstone: #FFFBFA;
+$orange: #E84E0F;
+
+$bg: antiquewhite;
+$--bs-primary-rgb: 0, 255, 0;
+$light: $soapstone;
+
+h1:first-of-type, h2:first-of-type {
+  font-family: monospace;
+};
+article > ul, article > p { font-family: monospace; text-align: justify; }
+
+
+h1, h2, p, li {
+    margin-block-end: 0 !important;
+    margin-block-start: 0 !important;
+    margin: 0.5;
+    line-height: 1.7;
+}
+
+// Button styling
+
+.btn:hover {
+    background-color: #EAEAEA;
+}
+
+// Step one styling
+
+#stepone {
+    display:block; // SET TO BLOCK
+}
+
+// Step Two Styling
+
+#steptwo, #steptwo > h1, #steptwo > h2, #steptwo > p, #steptwo > ul, #getquestions {
+    display: none; // SET TO NONE
+}
+
+li {
+    list-style: none;
+}
+
+li::before {
+    background: url("/dist/res/img/arrow.webp") no-repeat left 5px;
+    background-size: contain;
+    padding-left: 16px;
+    content: '  ';
+}
+
+li > span {
+    padding-left: .5rem;
+}
+
+// Slider styling
+
+.contact-popup {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    max-width:100%; width: 768px; // TODO: set as media query.
+    height: 100vh; // make scrollable
+    overflow-y: scroll;
+    background: $orange;
+    color: white;
+}
+
+#contact-return {
+    cursor: pointer;
+}
+
+.ff-serif {
+    font-family: 'ABCDiatypeRegular', 'Times New Roman', serif;
+    font-style: italic;
+}
+
+.ff-sans {
+    font-family: sans-serif;
+}
+
+// End of slider styling
+
+// Modal styling
+
+.modal-header {
+    background-color: $orange;
+    color: white;
+    font-weight: 700;
+}
