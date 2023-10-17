@@ -49,8 +49,8 @@ function tod() {
 }
 
 function populateQuestions() {
-  $("#question-one-label").html("Question one: Suppose you are looking after a new eCommerce direct-to-consumer website, and you want to track the website's sales. What trackers might you install on the website to evaluate its performance, and why?");
-  $("#question-two-label").html("Question two: Suppose a client has recently launched a newsletter signup widget for their business-to-business brand. How would you track the number of signups to the newsletter?");
+  $("#question-one-label").html("Question one: Suppose you are looking after a new eCommerce direct-to-consumer website, and you want to track the website's sales. What trackers might you install, or events might you monitor, on the website to evaluate its performance? And why?");
+  $("#question-two-label").html("Question two: Suppose a client has recently launched a newsletter for their business-to-business brand. They want C-level executives to sign up online. Where might they reach their target audience, and how might they do so?");
   $("#question-three-label").html("Question three: Suppose a client is looking to generate leads for their business through Meta advertising. Which of the following metrics would be the most useful for evaluating the success of their campaign?");
   $("#question-four-label").html("Question four: What is A/B testing? Give an example of an A/B test you could run on this site.")
   $("#question-five-label").html("Question five: A business spends £5,000 on a Facebook ad campaign and reaches 50,000 people. If the cost per click (CPC) is £1.50, what is the click-through rate (CTR) for the campaign?");
