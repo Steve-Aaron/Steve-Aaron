@@ -82,6 +82,47 @@ footer {
     padding-top:4rem;
   }
 
+  summary {
+    padding-bottom: .25rem;
+    position: relative;
+
+  }
+
+  em {
+    font-family: serif;
+    font-weight: lighter;
+  }
+
+  details p, details li {
+    font-size: .75em;
+  }
+
+  details a {
+    color: blue
+  }
+
+  blockquote {
+    padding: 0 1rem;
+    color: #333;
+    text-align: left;
+    font-style: italic;
+    border: 1px dashed black;
+  }
+
+  summary:hover {
+    cursor: pointer;
+    color: blue;
+    font-weight: 500;
+    transition: all .25s ease;
+    animation-iteration-count: 1;
+  }
+
+  ::selection, ::-moz-selection {
+    background: #FFFBFA;
+    color: black;
+  }
+
+
 /* @font-face {
     font-family: Rye;
     src: url(https://fonts.googleapis.com/css?family=Rye);
